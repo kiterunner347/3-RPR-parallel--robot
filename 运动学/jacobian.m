@@ -1,6 +1,6 @@
 function J = jacobian(rho,p,parameter)
 %3-RPR机器人逆微分运动学求解，p为末端执行器位姿，parameter为机器人参数
-%读取parameter中的参数
+%读取parameter中的参数，666
 
 l0=parameter(1);l1=parameter(2);
 a3=parameter(3);rho_min=parameter(4);rho_max=parameter(5);
