@@ -1,0 +1,543 @@
+! Adams View Adams 2017 (建立 Dec  9 2016)
+! 图像:  OpenGL
+! 输入命令'?'或 'help'。
+int dia dis dia=.gui.file_import
+interface dialog undisplay dialog=.gui.file_import
+int dia dis dia=.gui.file_import
+!
+!  Undisplay containers
+!
+int cont und cont=.gui.file_import.*
+!
+int push_button undisp push_button=.gui.file_import.btn_disp_opt
+if cond= (DB_EXISTS(".gui.file_import.adams"))
+    int cont disp cont=.gui.file_import.adams
+else
+  int field set field=.gui.file_import.cadimport.f_file_name string=""
+  int field set field=.gui.file_import.cadimport.f_part_name string=""
+  int push_button disp push_button=.gui.file_import.btn_disp_opt
+  int cont disp cont=.gui.file_import.cadimport
+end
+interface label undisplay label_name = .gui.file_import.cadimport.l_naming
+interface option_menu undisplay option_menu_name = .gui.file_import.cadimport.opt_naming
+if cond=("adams" == "parasolid" )
+var set var=.gui.file_import.cadimport.optFile string =""
+int push_button disp push_button=.gui.file_import.btn_disp_opt
+end
+if cond=("adams" == "unigraphics" )
+interface label display label_name = .gui.file_import.cadimport.l_naming
+interface option_menu display option_menu_name = .gui.file_import.cadimport.opt_naming
+end
+file adams_data_set read  &
+   file_name = "D:/Adams_experiment/PM.adm"  &
+   
+if cond=("" != "plot")
+  if cond=1
+    model display view=all fit=yes
+  end
+end
+if cond=("" == "plot")
+  interface plot panel reload
+end
+if cond=1
+  int dia undisp dia=.gui.file_import
+end
+interface dialog undisplay dialog=.gui.msg_box
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+default coordinate_system default_coordinate_system=.PM
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+if cond = (eval( db_default(.System_Defaults, "view").render) == 1)
+   view man mod render=sshaded
+else
+   view man mod render=wireframe
+end !if on render
+if cond = (eval( db_default(.System_Defaults, "view").render) == 1)
+   view man mod render=sshaded
+else
+   view man mod render=wireframe
+end !if on render
+if cond = (eval( db_default(.System_Defaults, "view").render) == 1)
+   view man mod render=sshaded
+else
+   view man mod render=wireframe
+end !if on render
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group modify group=SELECT_LIST object=.PM.Parallel5
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group modify group=SELECT_LIST object=.PM.Parallel5_2
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group empty group=SELECT_LIST
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group modify group=SELECT_LIST object=.PM.Parallel2_2
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+if cond = (eval( db_default(.System_Defaults, "view").render) == 1)
+   view man mod render=sshaded
+else
+   view man mod render=wireframe
+end !if on render
+if cond = (eval( db_default(.System_Defaults, "view").render) == 1)
+   view man mod render=sshaded
+else
+   view man mod render=wireframe
+end !if on render
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group empty group=SELECT_LIST
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+if cond = (eval( db_default(.System_Defaults, "view").render) == 1)
+   view man mod render=sshaded
+else
+   view man mod render=wireframe
+end !if on render
+if cond = (eval( db_default(.System_Defaults, "view").render) == 1)
+   view man mod render=sshaded
+else
+   view man mod render=wireframe
+end !if on render
+if cond = (eval( db_default(.System_Defaults, "view").render) == 1)
+   view man mod render=sshaded
+else
+   view man mod render=wireframe
+end !if on render
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group modify group=SELECT_LIST object=.PM.Parallel5
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group empty group=SELECT_LIST
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group modify group=SELECT_LIST object=.PM.Parallel5_2
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group empty group=SELECT_LIST
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group modify group=SELECT_LIST object=.PM.Parallel5_2
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group empty group=SELECT_LIST
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group modify group=SELECT_LIST object=.PM.Parallel5
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group empty group=SELECT_LIST
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group object add group=SELECT_LIST objects=.PM.Parallel2_2
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group empty group=SELECT_LIST
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group modify group=SELECT_LIST object=.PM.Parallel5_2
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group empty group=SELECT_LIST
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group modify group=SELECT_LIST object=.PM.Parallel5_2
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group empty group=SELECT_LIST
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group modify group=SELECT_LIST object=.PM.Parallel1
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group empty group=SELECT_LIST
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+if cond = (eval( db_default(.System_Defaults, "view").render) == 1)
+   view man mod render=sshaded
+else
+   view man mod render=wireframe
+end !if on render
+if cond = (eval( db_default(.System_Defaults, "view").render) == 1)
+   view man mod render=sshaded
+else
+   view man mod render=wireframe
+end !if on render
+if cond = (eval( db_default(.System_Defaults, "view").render) == 1)
+   view man mod render=sshaded
+else
+   view man mod render=wireframe
+end !if on render
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+interface dialog execute dialog=.gui.dat_mod_pla_inp undisplay=yes
+data_element modify plant input  &
+   plant_input_name = .PM.Force1  &
+     &
+   adams_id = 1  &
+     &
+   variable_name = F1
+mdi fbDisplay mode="Runtime Function" &
+! >> mdi fbDisplay mode="Runtime Function" &
+   insert=.gui.adams_variable_cremod.function func_text="0"
+! &>    insert=.gui.adams_variable_cremod.function func_text="0"
+! >> !"Runtime Function"
+! >> !.gui.adams_variable_cremod.function
+! >> !""
+! >> !""
+! >> !(none)
+! >> !"0"
+! >> !END_OF_PARAMETERS
+! >> file log command=off
+! >> def com echo=off
+interface dialog undisplay dialog=.gui.funcBldr
+interface dialog undisplay dialog=.gui.adams_variable_cremod
+interface dialog execute dialog = .gui.point_force_cremod undisp = yes
+! Handle topology change (suppress 'must be on different parts' errors)
+undo begin suppress = yes
+if condition = ( 0 == 0 )
+   mdi marker set_parent marker = MARKER_10306 new_parent = .PM.Moving_2_1_2
+   mdi marker set_parent marker = MARKER_10307 new_parent = Moving_2_1_2
+elseif condition = ( 0 == 1 )
+   mdi marker set_parent marker = (eval( .PM.SFORCE_1.i_marker )) new_parent = .PM.Moving_2_1_2
+   mdi marker set_parent marker = (eval( .PM.SFORCE_1.j_marker )) new_parent = (eval( db_default( .system_defaults, "model" ).ground ))
+elseif condition = ( 0 == 2 )
+   mdi marker set_parent marker = (eval( .PM.SFORCE_1.i_marker )) new_parent = .PM.Moving_2_1_2
+   mdi marker set_parent marker = (eval( .PM.SFORCE_1.j_marker )) new_parent = 
+elseif condition = ( 0 == 3 )
+   mdi marker set_parent marker = (eval( .PM.SFORCE_1.i_marker )) new_parent = 
+   mdi marker set_parent marker = (eval( .PM.SFORCE_1.j_marker )) new_parent = 
+end
+undo end
+!
+force modify direct single_component_force  &
+   single_component_force = .PM.SFORCE_1  &
+  adams_id = 2 &
+  function = "VARVAL(F1)"  &
+    &
+    &
+   action_only = "on"  &
+   comments = ""
+!
+! manage graphic forces (type 0 = none 1 = first body 2 = second body)
+mdi graphic_force object = .PM.SFORCE_1 type = 1
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+interface dialog undisplay dialog=.gui.adams_variable_cremod
+interface dialog undisplay dialog=.gui.adams_variable_cremod
+interface dialog undisplay dialog=.gui.adams_variable_cremod
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group modify group=SELECT_LIST object=.PM.Outlayer_1.MARKER_8
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group empty group=SELECT_LIST
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group modify group=SELECT_LIST object=.PM.Parallel5
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+if cond = (eval( db_default(.System_Defaults, "view").render) == 1)
+   view man mod render=sshaded
+else
+   view man mod render=wireframe
+end !if on render
+if cond = (eval( db_default(.System_Defaults, "view").render) == 1)
+   view man mod render=sshaded
+else
+   view man mod render=wireframe
+end !if on render
+if cond = (eval( db_default(.System_Defaults, "view").render) == 1)
+   view man mod render=sshaded
+else
+   view man mod render=wireframe
+end !if on render
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+group empty group=SELECT_LIST
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+if cond = (eval( db_default(.System_Defaults, "view").render) == 1)
+   view man mod render=sshaded
+else
+   view man mod render=wireframe
+end !if on render
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+interface dialog execute dialog=.gui.dat_mod_pla_inp undisplay=yes
+data_element modify plant input  &
+   plant_input_name = .PM.Force1  &
+     &
+   adams_id = 1  &
+     &
+   variable_name = F1
+interface dialog execute dialog=.gui.dat_mod_pla_inp undisplay=yes
+data_element modify plant input  &
+   plant_input_name = .PM.Force2  &
+     &
+   adams_id = 2  &
+     &
+   variable_name = F2
+interface dialog execute dialog=.gui.dat_mod_pla_inp undisplay=yes
+data_element modify plant input  &
+   plant_input_name = .PM.Force3  &
+     &
+   adams_id = 3  &
+     &
+   variable_name = F3
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  SELECT OBJECT
+undo begin
+undo end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+var set var=.gui.exit_panel.b_save_then_exit.filename str="PM"
+interface dialog undis dialog=.gui.exit_panel
+file binary write file="PM"
+! 写入文件。
+! 文件写入完成。
+quit conf=no

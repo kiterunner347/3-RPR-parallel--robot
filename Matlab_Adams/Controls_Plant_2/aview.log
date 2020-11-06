@@ -1,0 +1,223 @@
+! Adams View Adams 2017 (建立 Dec  9 2016)
+! 图像:  OpenGL
+! 输入命令'?'或 'help'。
+interface dialog undisplay dialog=.gui.msg_box
+int dia dis dia=.gui.file_import
+!
+!  Undisplay containers
+!
+int cont und cont=.gui.file_import.*
+!
+int push_button undisp push_button=.gui.file_import.btn_disp_opt
+if cond= (DB_EXISTS(".gui.file_import.adams"))
+    int cont disp cont=.gui.file_import.adams
+else
+  int field set field=.gui.file_import.cadimport.f_file_name string=""
+  int field set field=.gui.file_import.cadimport.f_part_name string=""
+  int push_button disp push_button=.gui.file_import.btn_disp_opt
+  int cont disp cont=.gui.file_import.cadimport
+end
+interface label undisplay label_name = .gui.file_import.cadimport.l_naming
+interface option_menu undisplay option_menu_name = .gui.file_import.cadimport.opt_naming
+if cond=("adams" == "parasolid" )
+var set var=.gui.file_import.cadimport.optFile string =""
+int push_button disp push_button=.gui.file_import.btn_disp_opt
+end
+if cond=("adams" == "unigraphics" )
+interface label display label_name = .gui.file_import.cadimport.l_naming
+interface option_menu display option_menu_name = .gui.file_import.cadimport.opt_naming
+end
+file adams_data_set read  &
+   file_name = "D:/Adams_experiment/PM.adm"  &
+   
+if cond=("" != "plot")
+  if cond=1
+    model display view=all fit=yes
+  end
+end
+if cond=("" == "plot")
+  interface plot panel reload
+end
+if cond=1
+  int dia undisp dia=.gui.file_import
+end
+var set var=.gui.main.mmenu_menu.mbar_refresh.tools.button__5.loadedPlugins str=""
+for var=.gui.main.mmenu_menu.mbar_refresh.tools.button__5.loopobj object=plugins.amachinery
+  if cond=(.gui.main.mmenu_menu.mbar_refresh.tools.button__5.loadedPlugins == "")
+    var set var=.gui.main.mmenu_menu.mbar_refresh.tools.button__5.loadedPlugins str="amachinery"
+  else
+    var set var=.gui.main.mmenu_menu.mbar_refresh.tools.button__5.loadedPlugins str=(eval(.gui.main.mmenu_menu.mbar_refresh.tools.button__5.loadedPlugins // ":" // .gui.main.mmenu_menu.mbar_refresh.tools.button__5.loopobj.object_value.name))
+  end
+end
+variable set variable=.gui.main.mmenu_menu.mbar_refresh.tools.button__5.tmp int=1
+if cond=(.gui.main.mmenu_menu.mbar_refresh.tools.button__5.tmp == 1)
+  variable set variable=.gui.main.mmenu_menu.mbar_refresh.tools.button__5.tmp int=1
+end
+if cond=(.gui.main.mmenu_menu.mbar_refresh.tools.button__5.tmp == 1)
+  variable set variable=.gui.main.mmenu_menu.mbar_refresh.tools.button__5.tmp int=1
+end
+variable delete variable=.gui.main.mmenu_menu.mbar_refresh.tools.button__5.tmp
+ interface dialog display dialog= .controls.Plant_Export
+ !if condition=(DB_EXISTS(DB_DEFAULT(.system_defaults, "plant_input")))
+   var set var=.controls.Plant_Export.button_6.pinputs obj=.PM.Force1, .PM.Force2, .PM.Force3
+   if cond=(db_exists(".controls.Plant_Export.button_6.pinputs"))
+     var mod var=.controls.Plant_Export.pinput obj=.PM.Force1, .PM.Force2, .PM.Force3
+     var set var=.controls.Plant_Export.button_6.idx int=0
+     for var=.controls.Plant_Export.button_6.pipcnt start=1 end=3.0
+       for var=.controls.Plant_Export.button_6.varcnt start=1 end=1.0
+          var set var=.controls.Plant_Export.button_6.idx int=1
+          var set var=.controls.Plant_Export.button_6.input_variables obj=F1 index=1
+       end
+     end
+     if con = (.controls.Plant_Export.button_6.input_variables.object_value[1] == none)
+       var del var = (eval(db_children(.controls.Plant_Export.button_6,"variable")))
+       return
+     end
+     if cond=("" != "")
+        int fie set fie=.controls.Plant_Export.input_channels string=(str_chr(10)) act=append
+     end
+     interface field set fiel=.controls.Plant_Export.input_channels data= ".controls.Plant_Export.button_6.input_variables.object_value" act=append
+     if cond=(db_exists(".controls.Plant_Export.button_6.input_variables"))
+        if cond = (!str_is_space(.controls.Plant_Export.button_6.input_variables))
+           interface option_menu modify &
+              option_menu_name = .controls.Plant_Export.option_2 &
+              enabled = yes &
+              choices=".PM.F1", ".PM.F2", ".PM.F3" &
+              values= ".PM.F1", ".PM.F2", ".PM.F3"
+           interface push_button modify push_button=.controls.Plant_Export.moveup_2 enabled = yes
+           interface push_button modify push_button=.controls.Plant_Export.movedown_2 enabled = yes 
+        end 
+     else
+        interface option_menu modify &
+           option_menu_name = .controls.Plant_Export.option_2 &
+           enabled = no &
+           choices= "none" &
+           values= "none"
+        interface push_button modify push_button=.controls.Plant_Export.moveup_2 enabled = no
+        interface push_button modify push_button=.controls.Plant_Export.movedown_2 enabled = no  
+     end
+   end
+   variable delete variable_name=.controls.Plant_Export.button_6.pinputs, .controls.Plant_Export.button_6.idx, .controls.Plant_Export.button_6.input_variables
+!end
+ !if condition=(DB_EXISTS(DB_DEFAULT(.system_defaults, "plant_output")))
+   var set var=.controls.Plant_Export.button_7.pinputs obj=.PM.anglez, .PM.omegaz, .PM.Positionx, .PM.Positiony, .PM.Vecolityx, .PM.Vecolityy
+   if cond=(db_exists(".controls.Plant_Export.button_7.pinputs"))
+     var mod var=.controls.Plant_Export.poutput obj=.PM.anglez, .PM.omegaz, .PM.Positionx, .PM.Positiony, .PM.Vecolityx, .PM.Vecolityy
+     var set var=.controls.Plant_Export.button_7.idx int=0
+     for var=.controls.Plant_Export.button_7.pipcnt start=1 end=6.0
+       for var=.controls.Plant_Export.button_7.varcnt start=1 end=1.0
+          var set var=.controls.Plant_Export.button_7.idx int=1
+          var set var=.controls.Plant_Export.button_7.input_variables obj=.PM.angle index=1
+       end
+     end
+     if con = (.controls.Plant_Export.button_7.input_variables.object_value[1] == none)
+       var del var = (eval(db_children(.controls.Plant_Export.button_7,"variable")))
+       return
+     end
+     if cond=("" != "")
+        int fie set fie=.controls.Plant_Export.output_channels string=(str_chr(10)) act=append
+     end
+     interface field set fiel=.controls.Plant_Export.output_channels data= ".controls.Plant_Export.button_7.input_variables.object_value" act=append
+     if cond=(db_exists(".controls.Plant_Export.button_7.input_variables"))
+        if cond = (!str_is_space(.controls.Plant_Export.button_7.input_variables))
+           interface option_menu modify &
+              option_menu_name = .controls.Plant_Export.option_1 &
+              enabled = yes &
+              choices=".PM.angle", ".PM.omega", ".PM.Posx", ".PM.Posy", ".PM.Vx", ".PM.Vy" &
+              values= ".PM.angle", ".PM.omega", ".PM.Posx", ".PM.Posy", ".PM.Vx", ".PM.Vy"
+           interface push_button modify push_button=.controls.Plant_Export.moveup_1 enabled = yes
+           interface push_button modify push_button=.controls.Plant_Export.movedown_1 enabled = yes
+        end  
+     else
+        interface option_menu modify &
+           option_menu_name = .controls.Plant_Export.option_1 &
+           enabled = no &
+           choices= "none" &
+           values= "none"
+        interface push_button modify push_button=.controls.Plant_Export.moveup_1 enabled = no
+        interface push_button modify push_button=.controls.Plant_Export.movedown_1 enabled = no  
+     end
+   end
+   variable delete variable_name=.controls.Plant_Export.button_7.pinputs, .controls.Plant_Export.button_7.idx, .controls.Plant_Export.button_7.input_variables
+!else 
+!   interface message threshold_severity = information
+!   interface message command_window_level = brief
+!   interface message message = "No Controls_Plant exists!" severity = information
+!   interface message threshold_severity = warning
+!end
+var set var=.controls.Plant_Export.button_3.mymodel str=".PM"
+if cond=("F1,F2,F3" != "")
+   for var=.controls.Plant_Export.button_3.loopcnt start=1 end=3.0
+      if cond=(str_compare(db_oldest_ancestor({F1,F2,F3}[.controls.Plant_Export.button_3.loopcnt],"Model"),.controls.Plant_Export.button_3.mymodel))
+         var set var=.mdi.PeErrStr string=(eval("Input variable '"//{F1,F2,F3}[.controls.Plant_Export.button_3.loopcnt]//"' does not belong to the model. Only model variables allowed."))
+         var set var=.mdi.PeErrRet int=(eval(alert2(.mdi.PeErrStr.self, "error")))
+         var del var=.mdi.PeErrRet
+         var del var=.mdi.PeErrStr
+         var delete var=.controls.Plant_Export.button_3.mymodel
+         return
+      end
+   end
+end
+if cond=(".PM.angle,omega,.PM.Posx,.PM.Posy,.PM.Vx,.PM.Vy" != "")
+   for var=.controls.Plant_Export.button_3.loopcnt start=1 end=6.0
+      if cond=(str_compare(db_oldest_ancestor({.PM.angle,omega,.PM.Posx,.PM.Posy,.PM.Vx,.PM.Vy}[.controls.Plant_Export.button_3.loopcnt],"Model"),.controls.Plant_Export.button_3.mymodel))
+         var set var=.mdi.PeErrStr string=(eval("Output variable '"//{.PM.angle,omega,.PM.Posx,.PM.Posy,.PM.Vx,.PM.Vy}[.controls.Plant_Export.button_3.loopcnt]//"' does not belong to the model. Only model variables allowed."))
+         var set var=.mdi.PeErrRet int=(eval(alert2(.mdi.PeErrStr.self, "error")))
+         var del var=.mdi.PeErrRet
+         var del var=.mdi.PeErrStr
+         var delete var=.controls.Plant_Export.button_3.mymodel
+         return
+      end
+   end
+end
+var delete var=.controls.Plant_Export.button_3.mymodel
+interface dialog execute dialog=.controls.Plant_Export undisp=yes
+if cond=("new" == "new")
+   controls controls_plant create &
+   instance_name = .PM.Controls_Plant_2 &
+    &
+   &
+   file_name = "Controls_Plant_2" &
+   solver_type = cplusplus &
+   target = MATLAB &
+   input_channels = F1,F2,F3 &
+   output_channels = .PM.angle,omega,.PM.Posx,.PM.Posy,.PM.Vx,.PM.Vy &
+   analysis_type = non_linear &
+   analysis_init = no &
+   host = "DESKTOP-BUO0R38" &
+    &
+    &
+   
+else
+   controls controls_plant modify &
+   instance_name = .PM.Controls_Plant_2 &
+    &
+   &
+   file_name = "Controls_Plant_2" &
+   solver_type = cplusplus &
+   target = MATLAB &
+   input_channels = F1,F2,F3 &
+   output_channels = .PM.angle,omega,.PM.Posx,.PM.Posy,.PM.Vx,.PM.Vy &
+   analysis_type = non_linear &
+   analysis_init = no &
+   host = "DESKTOP-BUO0R38" &
+    &
+    &
+   
+end
+var set var=_model str=".PM"
+mdi controls controls_plant_export_pio &
+   model = .PM pinput = .PM.Controls_Plant_2.ctrl_pinput poutput=.PM.Controls_Plant_2.ctrl_poutput &
+   user_exec = "" CSD_package = "MATLAB" &
+   type = "non_linear" init_stat="no" &
+   solver_type = "cplusplus" host="DESKTOP-BUO0R38" init_cmd="" &
+   state_out="on" file_prefix="Controls_Plant_2" &
+   fmu_tcp_ip="off" &
+   fmu_output_rate=1
+var delete var=_model
+var set var=.gui.exit_panel.b_save_then_exit.filename str="PM"
+interface dialog undis dialog=.gui.exit_panel
+file binary write file="PM"
+! 写入文件。
+! 文件写入完成。
+quit conf=no
