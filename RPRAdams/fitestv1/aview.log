@@ -1,0 +1,55 @@
+! Adams View Adams 2020 FP1 Student Edition (built Aug  4 2020)
+! Graphics:  OpenGL
+! Enter a command, '?', or 'help'.
+! WARNING:  The translational initial conditions for joint, .RPR3.Tran3, will be ignored 
+! because there is a translational motion generator on the joint.
+model display model=.RPR3 view=all
+! >> model display model=.RPR3 view=all
+! VERIFY MODEL: .RPR3
+! 
+!  -27 Gruebler Count (approximate degrees of freedom)
+!   11 Moving Parts (not including ground)
+!   12 Cylindrical Joints
+!    6 Planar Joints
+!    3 Translational Joints
+!    5 Parallel_axes Primitive_Joints
+!    2 Motions
+! 
+!    1 Degrees of Freedom for .RPR3
+! 
+! There are 28 redundant constraint equations.
+! 
+!    This constraint:                                       unnecessarily removes this DOF:
+! 
+!    .RPR3.Concentric6    (Cylindrical Joint)               Rotation Between Zi & Yj
+!    .RPR3.Concentric9    (Cylindrical Joint)               Rotation Between Zi & Xj
+!    .RPR3.Concentric5    (Cylindrical Joint)               Rotation Between Zi & Xj
+!    .RPR3.Concentric7    (Cylindrical Joint)               Rotation Between Zi & Xj
+!    .RPR3.Concentric7    (Cylindrical Joint)               Rotation Between Zi & Yj
+!    .RPR3.Concentric10   (Cylindrical Joint)               Rotation Between Zi & Xj
+!    .RPR3.Concentric10   (Cylindrical Joint)               Rotation Between Zi & Yj
+!    .RPR3.Concentric1_6  (Cylindrical Joint)               Rotation Between Zi & Xj
+!    .RPR3.Concentric12   (Cylindrical Joint)               Rotation Between Zi & Yj
+!    .RPR3.Concentric3    (Cylindrical Joint)               Rotation Between Zi & Yj
+!    .RPR3.Distance3      (Planar Joint)                    Rotation Between Zi & Xj
+!    .RPR3.Distance3      (Planar Joint)                    Rotation Between Zi & Yj
+!    .RPR3.Distance2      (Planar Joint)                    Rotation Between Zi & Xj
+!    .RPR3.Distance2      (Planar Joint)                    Rotation Between Zi & Yj
+!    .RPR3.Distance5      (Planar Joint)                    Rotation Between Zi & Xj
+!    .RPR3.Distance5      (Planar Joint)                    Rotation Between Zi & Yj
+!    .RPR3.Distance7      (Planar Joint)                    Rotation Between Zi & Xj
+!    .RPR3.Distance1      (Planar Joint)                    Rotation Between Zi & Yj
+!    .RPR3.Distance4      (Planar Joint)                    Rotation Between Zi & Xj
+!    .RPR3.Distance4      (Planar Joint)                    Rotation Between Zi & Yj
+!    .RPR3.a_1_2          (Parallel_axes Primitive_Joint)   Rotation Between Zi & Xj
+!    .RPR3.a_1_2          (Parallel_axes Primitive_Joint)   Rotation Between Zi & Yj
+!    .RPR3.a_1            (Parallel_axes Primitive_Joint)   Rotation Between Zi & Xj
+!    .RPR3.a_1            (Parallel_axes Primitive_Joint)   Rotation Between Zi & Yj
+!    .RPR3.a_1_3          (Parallel_axes Primitive_Joint)   Rotation Between Zi & Yj
+!    .RPR3.a_1_4          (Parallel_axes Primitive_Joint)   Rotation Between Zi & Yj
+!    .RPR3.a_1_5          (Parallel_axes Primitive_Joint)   Rotation Between Zi & Xj
+!    .RPR3.a_1_5          (Parallel_axes Primitive_Joint)   Rotation Between Zi & Yj
+! 
+! 
+! Model verified successfully
+! ERROR:  PINPUT/0 is not defined in the data set. Command ignored.

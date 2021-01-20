@@ -1,0 +1,864 @@
+SOLIDWORKS Motion Mechanism
+!
+!-------------------------------- SYSTEM UNITS ---------------------------------
+!
+UNITS/
+, FORCE = NEWTON
+, MASS = KILOGRAM
+, LENGTH = METER
+, TIME = SECOND
+!
+!----------------------------------- PARTS -------------------------------------
+!
+!----------------------------------- Ground ------------------------------------
+!
+!Mechanism simTime 1
+!Mechanism simFrames 25
+!                            adams_view_name='ground'
+PART/1
+, GROUND
+!
+!                          adams_view_name='MARKER_34'
+MARKER/34
+, PART = 1
+, QP = 0.283519522, 0.081444862, 0.0875
+!
+!                          adams_view_name='MARKER_35'
+MARKER/35
+, PART = 1
+, QP = 0.3, 0.0302, 0.1034
+!
+!                          adams_view_name='MARKER_38'
+MARKER/38
+, PART = 1
+, QP = -0.2941851534, 0.0816541802, 0.1375
+!
+!                          adams_view_name='MARKER_39'
+MARKER/39
+, PART = 1
+, QP = -0.31, 0.0302, 0.1534
+!
+!                          adams_view_name='MARKER_42'
+MARKER/42
+, PART = 1
+, QP = -0.3171272644, 0.0835558257, 0.4375
+!
+!                          adams_view_name='MARKER_43'
+MARKER/43
+, PART = 1
+, QP = -0.31, 0.0302, 0.4534
+!
+!                          adams_view_name='MARKER_46'
+MARKER/46
+, PART = 1
+, QP = -0.2941851534, 0.0816541802, 0.7375
+!
+!                          adams_view_name='MARKER_47'
+MARKER/47
+, PART = 1
+, QP = -0.31, 0.0302, 0.7534
+!
+!                          adams_view_name='MARKER_50'
+MARKER/50
+, PART = 1
+, QP = 0.283519522, 0.081444862, 0.7875
+!
+!                          adams_view_name='MARKER_51'
+MARKER/51
+, PART = 1
+, QP = 0.3, 0.0302, 0.7166
+!
+!                adams_view_name='Simple_Base_Assembly-1_Origin'
+MARKER/10012
+, PART = 1
+!
+!                           adams_view_name='_Origin'
+MARKER/10015
+, PART = 1
+!
+!                         adams_view_name='MARKER_10031'
+MARKER/10031
+, PART = 1
+!
+!             adams_view_name='Simple_Base_Assembly_1_graphic_body1'
+GRAPHICS/12
+, EXTERNAL
+, RM = 10031
+, FILE = Simple_Assembly_SW_part7_solid1.xmt_bin
+, FACETING_TOLERANCE = 300.0028
+!
+!------------------------------------ Part -------------------------------------
+!
+!               adams_view_name='Simple_Linear_Actuator_Base-1_2'
+PART/2
+, QG = -0.244025923, 0.1922876959, 0.71
+, REULER = -112.1476528D, 0D, 0D
+, MASS = 3.737165669
+, CM = 10001
+, IP = 0.0023997083, 0.1767910774, 0.1773214924
+!
+!                           adams_view_name='MARKER_9'
+MARKER/9
+, PART = 2
+, QP = 0.0775, 0.027, 0
+, REULER = 180D, 90D, -90D
+!
+!                          adams_view_name='MARKER_11'
+MARKER/11
+, PART = 2
+, QP = -0.306, 0, 0
+, REULER = -90D, 90D, -90D
+!
+!                          adams_view_name='MARKER_45'
+MARKER/45
+, PART = 2
+, QP = 0.1213802319, -0.00475, 0.0275
+, REULER = 112.1476528D, 0D, 0D
+!
+!                          adams_view_name='MARKER_48'
+MARKER/48
+, PART = 2
+, QP = 0.175, 0, 0.02075
+, REULER = 112.1476528D, 0D, 0D
+!
+!            adams_view_name='Simple_Linear_Actuator_Base-1_2_Origin'
+MARKER/10000
+, PART = 2
+!
+!                              adams_view_name='cm'
+MARKER/10001
+, PART = 2
+, QP = -0.1843106392, -0.0070680215, 2.673395493E-04
+, REULER = 179.1519373D, 1.3131684D, -179.075555D
+!
+!                         adams_view_name='MARKER_10029'
+MARKER/10029
+, PART = 2
+!
+!         adams_view_name='Simple_Linear_Actuator_Base_1_graphic_body1'
+GRAPHICS/9
+, EXTERNAL
+, RM = 10029
+, FILE = Simple_Assembly_SW_part14_solid1.xmt_bin
+, FACETING_TOLERANCE = 300.0028
+!
+!------------------------------------ Part -------------------------------------
+!
+!                      adams_view_name='Simple_Platform-1'
+PART/3
+, QG = -0.1983798768, 0.9769087615, 0.408
+, REULER = 89.19449067D, 90D, -90D
+, MASS = 2.522091516
+, CM = 10003
+, IP = 0.1003871271, 0.2696136148, 0.1734463632
+!
+!                          adams_view_name='MARKER_22'
+MARKER/22
+, PART = 3
+, QP = 0.3625, 0.02, 0.28
+, REULER = -90D, 90D, 90.80550933D
+!
+!                          adams_view_name='MARKER_24'
+MARKER/24
+, PART = 3
+, QP = 0.2875, 0.02, 0.28
+, REULER = -90D, 90D, 90.80550933D
+!
+!                          adams_view_name='MARKER_26'
+MARKER/26
+, PART = 3
+, QP = -0.0125, 0.02, -0.155
+, REULER = -90D, 90D, 90.80550933D
+!
+!                          adams_view_name='MARKER_27'
+MARKER/27
+, PART = 3
+, QP = -0.29, 0.0155, 0.28
+, REULER = -90D, 90D, 90.80550933D
+!
+!                          adams_view_name='MARKER_30'
+MARKER/30
+, PART = 3
+, QP = -0.2875, 0.02, 0.28
+, REULER = -90D, 90D, 90.80550933D
+!
+!                          adams_view_name='MARKER_32'
+MARKER/32
+, PART = 3
+, QP = -0.3625, 0.02, 0.28
+, REULER = -90D, 90D, 90.80550933D
+!
+!                   adams_view_name='Simple_Platform-1_Origin'
+MARKER/10002
+, PART = 3
+!
+!                              adams_view_name='cm'
+MARKER/10003
+, PART = 3
+, QP = 2.313215347E-04, 0.0522361507, -0.0152938877
+, REULER = -176.0762851D, 1.193077792D, 176.0668075D
+!
+!                         adams_view_name='MARKER_10024'
+MARKER/10024
+, PART = 3
+!
+!               adams_view_name='Simple_Platform_1_graphic_body1'
+GRAPHICS/2
+, EXTERNAL
+, RM = 10024
+, FILE = Simple_Assembly_SW_part28_solid1.xmt_bin
+, FACETING_TOLERANCE = 300.0028
+!
+!------------------------------------ Part -------------------------------------
+!
+!               adams_view_name='Simple_Linear_Actuator_Base-1_4'
+PART/4
+, QG = 0.2613317988, 0.2008744568, 0.06
+, REULER = -77.23450781D, 0D, 0D
+, MASS = 3.737165669
+, CM = 10005
+, IP = 0.0023997083, 0.1767910774, 0.1773214924
+!
+!                          adams_view_name='MARKER_17'
+MARKER/17
+, PART = 4
+, QP = 0.0775, 0.027, 0
+, REULER = 180D, 90D, -90D
+!
+!                          adams_view_name='MARKER_19'
+MARKER/19
+, PART = 4
+, QP = -0.306, 0, 0
+, REULER = -90D, 90D, 90D
+!
+!                          adams_view_name='MARKER_33'
+MARKER/33
+, PART = 4
+, QP = 0.1213802319, -0.00475, 0.0275
+, REULER = 77.23450781D, 0D, 0D
+!
+!                          adams_view_name='MARKER_36'
+MARKER/36
+, PART = 4
+, QP = 0.175, 0, 0.02075
+, REULER = 77.23450781D, 0D, 0D
+!
+!            adams_view_name='Simple_Linear_Actuator_Base-1_4_Origin'
+MARKER/10004
+, PART = 4
+!
+!                              adams_view_name='cm'
+MARKER/10005
+, PART = 4
+, QP = -0.1843106392, -0.0070680215, 2.673395493E-04
+, REULER = 179.1519373D, 1.3131684D, -179.075555D
+!
+!                         adams_view_name='MARKER_10035'
+MARKER/10035
+, PART = 4
+!
+!         adams_view_name='Simple_Linear_Actuator_Base_1_graphic_body1'
+GRAPHICS/18
+, EXTERNAL
+, RM = 10035
+, FILE = Simple_Assembly_SW_part25_solid1.xmt_bin
+, FACETING_TOLERANCE = 300.0028
+!
+!------------------------------------ Part -------------------------------------
+!
+!               adams_view_name='Simple_Linear_Actuator_Base-1_6'
+PART/5
+, QG = 0.2613317988, 0.2008744568, 0.76
+, REULER = -77.23450781D, 0D, 0D
+, MASS = 3.737165669
+, CM = 10007
+, IP = 0.0023997083, 0.1767910774, 0.1773214924
+!
+!                          adams_view_name='MARKER_13'
+MARKER/13
+, PART = 5
+, QP = 0.0775, 0.027, 0
+, REULER = 180D, 90D, -90D
+!
+!                          adams_view_name='MARKER_15'
+MARKER/15
+, PART = 5
+, QP = -0.306, 0, 0
+, REULER = -90D, 90D, 90D
+!
+!                          adams_view_name='MARKER_49'
+MARKER/49
+, PART = 5
+, QP = 0.1213802319, -0.00475, 0.0275
+, REULER = 77.23450781D, 0D, 0D
+!
+!                          adams_view_name='MARKER_52'
+MARKER/52
+, PART = 5
+, QP = 0.175, 0, -0.02075
+, REULER = 77.23450781D, 0D, 0D
+!
+!            adams_view_name='Simple_Linear_Actuator_Base-1_6_Origin'
+MARKER/10006
+, PART = 5
+!
+!                              adams_view_name='cm'
+MARKER/10007
+, PART = 5
+, QP = -0.1843106392, -0.0070680215, 2.673395493E-04
+, REULER = 179.1519373D, 1.3131684D, -179.075555D
+!
+!                         adams_view_name='MARKER_10032'
+MARKER/10032
+, PART = 5
+!
+!         adams_view_name='Simple_Linear_Actuator_Base_1_graphic_body1'
+GRAPHICS/14
+, EXTERNAL
+, RM = 10032
+, FILE = Simple_Assembly_SW_part19_solid1.xmt_bin
+, FACETING_TOLERANCE = 300.0028
+!
+!------------------------------------ Part -------------------------------------
+!
+!               adams_view_name='Simple_Linear_Actuator_Base-1_5'
+PART/6
+, QG = -0.244025923, 0.1922876959, 0.11
+, REULER = -112.1476528D, 0D, 0D
+, MASS = 3.737165669
+, CM = 10009
+, IP = 0.0023997083, 0.1767910774, 0.1773214924
+!
+!                           adams_view_name='MARKER_5'
+MARKER/5
+, PART = 6
+, QP = 0.0775, 0.027, 0
+, REULER = 180D, 90D, -90D
+!
+!                           adams_view_name='MARKER_7'
+MARKER/7
+, PART = 6
+, QP = -0.306, 0, 0
+, REULER = -90D, 90D, -90D
+!
+!                          adams_view_name='MARKER_37'
+MARKER/37
+, PART = 6
+, QP = 0.1213802319, -0.00475, 0.0275
+, REULER = 112.1476528D, 0D, 0D
+!
+!                          adams_view_name='MARKER_40'
+MARKER/40
+, PART = 6
+, QP = 0.175, 0, 0.02075
+, REULER = 112.1476528D, 0D, 0D
+!
+!            adams_view_name='Simple_Linear_Actuator_Base-1_5_Origin'
+MARKER/10008
+, PART = 6
+!
+!                              adams_view_name='cm'
+MARKER/10009
+, PART = 6
+, QP = -0.1843106392, -0.0070680215, 2.673395493E-04
+, REULER = 179.1519373D, 1.3131684D, -179.075555D
+!
+!                         adams_view_name='MARKER_10026'
+MARKER/10026
+, PART = 6
+!
+!         adams_view_name='Simple_Linear_Actuator_Base_1_graphic_body1'
+GRAPHICS/5
+, EXTERNAL
+, RM = 10026
+, FILE = Simple_Assembly_SW_part10_solid1.xmt_bin
+, FACETING_TOLERANCE = 300.0028
+!
+!------------------------------------ Part -------------------------------------
+!
+!        adams_view_name='Simple_Linear_Actuator_Moving_With_Bearing-1_2'
+PART/7
+, QG = 0.2257193275, 0.3580614741, 0.06
+, REULER = -77.23450781D, 0D, 0D
+, MASS = 0.5332463599
+, CM = 10011
+, IP = 4.906618071E-05, 0.0237004231, 0.0237047179
+!
+!                          adams_view_name='MARKER_18'
+MARKER/18
+, PART = 7
+, QP = -0.6365969994, 0, 0.006
+, REULER = 180D, 90D, -90D
+!
+!                          adams_view_name='MARKER_20'
+MARKER/20
+, PART = 7
+, QP = -0.3255, 0, 0
+, REULER = -90D, 90D, 90D
+!
+!                          adams_view_name='MARKER_21'
+MARKER/21
+, PART = 7
+, QP = -0.651, 0, 0
+, REULER = 77.23450781D, 0D, 0D
+!
+!    adams_view_name='Simple_Linear_Actuator_Moving_With_Bearing-1_2_Origin'
+MARKER/10010
+, PART = 7
+!
+!                              adams_view_name='cm'
+MARKER/10011
+, PART = 7
+, QP = -0.4153110475, 1.822379656E-08, 2.821705271E-08
+!
+!                         adams_view_name='MARKER_10034'
+MARKER/10034
+, PART = 7
+!
+!  adams_view_name='Simple_Linear_Actuator_Moving_With_Bearing_1_graphic_body1'
+GRAPHICS/17
+, EXTERNAL
+, RM = 10034
+, FILE = Simple_Assembly_SW_part24_solid1.xmt_bin
+, FACETING_TOLERANCE = 300.0028
+!
+!------------------------------------ Part -------------------------------------
+!
+!                adams_view_name='Simple_Linear_Actuator_Base-1'
+PART/8
+, QG = -0.3177740333, 0.2050272416, 0.41
+, REULER = -87.45390898D, 0D, 0D
+, MASS = 3.737165669
+, CM = 10014
+, IP = 0.0023997083, 0.1767910774, 0.1773214924
+!
+!                           adams_view_name='MARKER_1'
+MARKER/1
+, PART = 8
+, QP = 0.0775, 0.027, 0
+, REULER = 180D, 90D, -90D
+!
+!                           adams_view_name='MARKER_3'
+MARKER/3
+, PART = 8
+, QP = -0.306, 0, 0
+, REULER = -90D, 90D, 90D
+!
+!                          adams_view_name='MARKER_41'
+MARKER/41
+, PART = 8
+, QP = 0.1213802319, -0.00475, 0.0275
+, REULER = 87.45390898D, 0D, 0D
+!
+!                          adams_view_name='MARKER_44'
+MARKER/44
+, PART = 8
+, QP = 0.175, 0, 0.02075
+, REULER = 87.45390898D, 0D, 0D
+!
+!             adams_view_name='Simple_Linear_Actuator_Base-1_Origin'
+MARKER/10013
+, PART = 8
+!
+!                              adams_view_name='cm'
+MARKER/10014
+, PART = 8
+, QP = -0.1843106392, -0.0070680215, 2.673395493E-04
+, REULER = 179.1519373D, 1.3131684D, -179.075555D
+!
+!                         adams_view_name='MARKER_10028'
+MARKER/10028
+, PART = 8
+!
+!         adams_view_name='Simple_Linear_Actuator_Base_1_graphic_body1'
+GRAPHICS/8
+, EXTERNAL
+, RM = 10028
+, FILE = Simple_Assembly_SW_part4_solid1.xmt_bin
+, FACETING_TOLERANCE = 300.0028
+!
+!------------------------------------ Part -------------------------------------
+!
+!        adams_view_name='Simple_Linear_Actuator_Moving_With_Bearing-1_6'
+PART/9
+, QG = -0.1635499472, 0.3900042248, 0.71
+, REULER = -112.1476528D, 0D, 0D
+, MASS = 0.5332463599
+, CM = 10017
+, IP = 4.906618071E-05, 0.0237004231, 0.0237047179
+!
+!                          adams_view_name='MARKER_10'
+MARKER/10
+, PART = 9
+, QP = -0.6365969994, 0, 0.006
+, REULER = 180D, 90D, -90D
+!
+!                          adams_view_name='MARKER_12'
+MARKER/12
+, PART = 9
+, QP = -0.3255, 0, 0
+, REULER = -90D, 90D, -90D
+!
+!                          adams_view_name='MARKER_28'
+MARKER/28
+, PART = 9
+, QP = -0.646808593, 0.0016377139, -0.012
+, REULER = 112.1476528D, 0D, 0D
+!
+!                          adams_view_name='MARKER_29'
+MARKER/29
+, PART = 9
+, QP = -0.651, 0, 0
+, REULER = 112.1476528D, 0D, 0D
+!
+!    adams_view_name='Simple_Linear_Actuator_Moving_With_Bearing-1_6_Origin'
+MARKER/10016
+, PART = 9
+!
+!                              adams_view_name='cm'
+MARKER/10017
+, PART = 9
+, QP = -0.4153110475, 1.822379656E-08, 2.821705271E-08
+!
+!                         adams_view_name='MARKER_10030'
+MARKER/10030
+, PART = 9
+!
+!  adams_view_name='Simple_Linear_Actuator_Moving_With_Bearing_1_graphic_body1'
+GRAPHICS/11
+, EXTERNAL
+, RM = 10030
+, FILE = Simple_Assembly_SW_part15_solid1.xmt_bin
+, FACETING_TOLERANCE = 300.0028
+!
+!------------------------------------ Part -------------------------------------
+!
+!        adams_view_name='Simple_Linear_Actuator_Moving_With_Bearing-1_4'
+PART/10
+, QG = -0.1635499472, 0.3900042248, 0.11
+, REULER = -112.1476528D, 0D, 0D
+, MASS = 0.5332463599
+, CM = 10019
+, IP = 4.906618071E-05, 0.0237004231, 0.0237047179
+!
+!                           adams_view_name='MARKER_6'
+MARKER/6
+, PART = 10
+, QP = -0.6365969994, 0, 0.006
+, REULER = 180D, 90D, -90D
+!
+!                           adams_view_name='MARKER_8'
+MARKER/8
+, PART = 10
+, QP = -0.3255, 0, 0
+, REULER = -90D, 90D, -90D
+!
+!                          adams_view_name='MARKER_23'
+MARKER/23
+, PART = 10
+, QP = -0.651, 0, 0
+, REULER = 112.1476528D, 0D, 0D
+!
+!    adams_view_name='Simple_Linear_Actuator_Moving_With_Bearing-1_4_Origin'
+MARKER/10018
+, PART = 10
+!
+!                              adams_view_name='cm'
+MARKER/10019
+, PART = 10
+, QP = -0.4153110475, 1.822379656E-08, 2.821705271E-08
+!
+!                         adams_view_name='MARKER_10025'
+MARKER/10025
+, PART = 10
+!
+!  adams_view_name='Simple_Linear_Actuator_Moving_With_Bearing_1_graphic_body1'
+GRAPHICS/4
+, EXTERNAL
+, RM = 10025
+, FILE = Simple_Assembly_SW_part9_solid1.xmt_bin
+, FACETING_TOLERANCE = 300.0028
+!
+!------------------------------------ Part -------------------------------------
+!
+!        adams_view_name='Simple_Linear_Actuator_Moving_With_Bearing-1_3'
+PART/11
+, QG = 0.2257193275, 0.3580614741, 0.76
+, REULER = -77.23450781D, 0D, 0D
+, MASS = 0.5332463599
+, CM = 10021
+, IP = 4.906618071E-05, 0.0237004231, 0.0237047179
+!
+!                          adams_view_name='MARKER_14'
+MARKER/14
+, PART = 11
+, QP = -0.6365969994, 0, 0.006
+, REULER = 180D, 90D, -90D
+!
+!                          adams_view_name='MARKER_16'
+MARKER/16
+, PART = 11
+, QP = -0.3255, 0, 0
+, REULER = -90D, 90D, 90D
+!
+!                          adams_view_name='MARKER_31'
+MARKER/31
+, PART = 11
+, QP = -0.651, 0, 0
+, REULER = 77.23450781D, 0D, 0D
+!
+!    adams_view_name='Simple_Linear_Actuator_Moving_With_Bearing-1_3_Origin'
+MARKER/10020
+, PART = 11
+!
+!                              adams_view_name='cm'
+MARKER/10021
+, PART = 11
+, QP = -0.4153110475, 1.822379656E-08, 2.821705271E-08
+!
+!                         adams_view_name='MARKER_10033'
+MARKER/10033
+, PART = 11
+!
+!  adams_view_name='Simple_Linear_Actuator_Moving_With_Bearing_1_graphic_body1'
+GRAPHICS/16
+, EXTERNAL
+, RM = 10033
+, FILE = Simple_Assembly_SW_part20_solid1.xmt_bin
+, FACETING_TOLERANCE = 300.0028
+!
+!------------------------------------ Part -------------------------------------
+!
+!         adams_view_name='Simple_Linear_Actuator_Moving_With_Bearing-1'
+PART/12
+, QG = -0.3241639887, 0.348728487, 0.41
+, REULER = -87.45390898D, 0D, 0D
+, MASS = 0.5332463599
+, CM = 10023
+, IP = 4.906618071E-05, 0.0237004231, 0.0237047179
+!
+!                           adams_view_name='MARKER_2'
+MARKER/2
+, PART = 12
+, QP = -0.6365969994, 0, 0.006
+, REULER = 180D, 90D, -90D
+!
+!                           adams_view_name='MARKER_4'
+MARKER/4
+, PART = 12
+, QP = -0.3255, 0, 0
+, REULER = -90D, 90D, 90D
+!
+!                          adams_view_name='MARKER_25'
+MARKER/25
+, PART = 12
+, QP = -0.651, 0, 0
+, REULER = 87.45390898D, 0D, 0D
+!
+!     adams_view_name='Simple_Linear_Actuator_Moving_With_Bearing-1_Origin'
+MARKER/10022
+, PART = 12
+!
+!                              adams_view_name='cm'
+MARKER/10023
+, PART = 12
+, QP = -0.4153110475, 1.822379656E-08, 2.821705271E-08
+!
+!                         adams_view_name='MARKER_10027'
+MARKER/10027
+, PART = 12
+!
+!  adams_view_name='Simple_Linear_Actuator_Moving_With_Bearing_1_graphic_body1'
+GRAPHICS/7
+, EXTERNAL
+, RM = 10027
+, FILE = Simple_Assembly_SW_part3_solid1.xmt_bin
+, FACETING_TOLERANCE = 300.0028
+!
+!-------------------------------- CONSTRAINTS ----------------------------------
+!
+!                         adams_view_name='Concentric6'
+JOINT/1
+, CYLINDRICAL
+, I = 31
+, J = 32
+!
+!                        adams_view_name='Concentric1_3'
+JOINT/2
+, CYLINDRICAL
+, I = 11
+, J = 12
+!
+!                         adams_view_name='Concentric9'
+JOINT/3
+, CYLINDRICAL
+, I = 25
+, J = 26
+!
+!                         adams_view_name='Concentric2'
+JOINT/4
+, CYLINDRICAL
+, I = 47
+, J = 48
+!
+!                          adams_view_name='Distance3'
+JOINT/5
+, PLANAR
+, I = 41
+, J = 42
+!
+!                        adams_view_name='Concentric1_4'
+JOINT/6
+, CYLINDRICAL
+, I = 15
+, J = 16
+!
+!                         adams_view_name='Concentric5'
+JOINT/7
+, CYLINDRICAL
+, I = 35
+, J = 36
+!
+!                         adams_view_name='Concentric7'
+JOINT/8
+, CYLINDRICAL
+, I = 29
+, J = 30
+!
+!                         adams_view_name='Concentric10'
+JOINT/9
+, CYLINDRICAL
+, I = 23
+, J = 24
+!
+!                        adams_view_name='Concentric1_6'
+JOINT/10
+, CYLINDRICAL
+, I = 51
+, J = 52
+!
+!                        adams_view_name='Concentric1_5'
+JOINT/11
+, CYLINDRICAL
+, I = 19
+, J = 20
+!
+!                          adams_view_name='Distance2'
+JOINT/12
+, PLANAR
+, I = 45
+, J = 46
+!
+!                         adams_view_name='Concentric4'
+JOINT/13
+, CYLINDRICAL
+, I = 39
+, J = 40
+!
+!                          adams_view_name='Distance5'
+JOINT/14
+, PLANAR
+, I = 33
+, J = 34
+!
+!                          adams_view_name='Distance7'
+JOINT/15
+, PLANAR
+, I = 27
+, J = 28
+!
+!                         adams_view_name='Concentric12'
+JOINT/16
+, CYLINDRICAL
+, I = 21
+, J = 22
+!
+!                        adams_view_name='Concentric1_2'
+JOINT/17
+, CYLINDRICAL
+, I = 7
+, J = 8
+!
+!                          adams_view_name='Distance1'
+JOINT/18
+, PLANAR
+, I = 49
+, J = 50
+!
+!                         adams_view_name='Concentric3'
+JOINT/19
+, CYLINDRICAL
+, I = 43
+, J = 44
+!
+!                         adams_view_name='Concentric1'
+JOINT/20
+, CYLINDRICAL
+, I = 3
+, J = 4
+!
+!                          adams_view_name='Distance4'
+JOINT/21
+, PLANAR
+, I = 37
+, J = 38
+!
+!                            adams_view_name='a_1_2'
+JPRIM/1
+, PARALLEL_AXES
+, I = 5
+, J = 6
+!
+!                             adams_view_name='a_1'
+JPRIM/2
+, PARALLEL_AXES
+, I = 1
+, J = 2
+!
+!                            adams_view_name='a_1_3'
+JPRIM/3
+, PARALLEL_AXES
+, I = 9
+, J = 10
+!
+!                            adams_view_name='a_1_4'
+JPRIM/4
+, PARALLEL_AXES
+, I = 13
+, J = 14
+!
+!                            adams_view_name='a_1_5'
+JPRIM/5
+, PARALLEL_AXES
+, I = 17
+, J = 18
+!
+!----------------------------- ANALYSIS SETTINGS -------------------------------
+!
+INTEGRATOR/
+, GSTIFF
+, ERROR = 1.0E-04
+, PATTERN = T:T:T:T:T:T:T:T:T:T
+, MAXIT = 25
+, HINIT = 1.0E-04
+, HMAX = 0.01
+, HMIN = 1.0E-07
+!
+KINEMATICS/
+, HMAX = 0.01
+!
+EQUILIBRIUM/
+!
+OUTPUT/
+, REQSAVE
+, GRSAVE
+, NOSEPARATOR
+!
+RESULTS/
+, FORMATTED
+, XRF
+!
+PREFERENCES/
+, CONTACT_FACETING_TOLERANCE = 900
+!
+END
